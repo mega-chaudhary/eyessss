@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Eye to Space</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="c" role="img" aria-label="Your eye drawn in coloured text characters. It forms closed, opens and blinks, then zooms into the pupil, and passes through into a starfield with a pink planet."></canvas>
+<div class="vignette" aria-hidden="true"></div>
+
+<header class="bar top">
+  <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+  <span class="ttl">Eye &rarr; Space</span>
+  <span class="readout" id="readout">build &middot; drawing</span>
+</header>
+
+<footer class="bar bottom">
+  <button id="play" type="button">Pause</button>
+  <div class="track">
+    <input id="scrub" type="range" min="0" max="20" step="0.01" value="0" aria-label="Timeline">
+    <div class="phases" aria-hidden="true">
+      <span style="left:0%">build</span>
+      <span style="left:10%">blink</span>
+      <span style="left:26.5%">zoom</span>
+      <span style="left:57.5%">space</span>
+    </div>
+  </div>
+  <button id="replay" type="button">Replay</button>
+</footer>
+
+<script src="photo.js"></script>
+<script src="eye.js"></script>
+</body>
+</html>
